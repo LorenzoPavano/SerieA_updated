@@ -35,16 +35,16 @@ public class Classifica {
     	
         for (int i = 0; i < classificaSerieA.length; i++) {
         	
-            if(classificaSerieA[i] == null){
+            if(squadra !=null && classificaSerieA[i] == null){
             	int j = 0;            	
                 while (j < i && i >= 1) {        //verifichiamo che la squadra non sia già presente con il while              
                     if(classificaSerieA[j].equals(squadra)){
-                        System.out.println("Impossibile eseguire il comando: la squadra già presente");
+                        System.out.println("Impossibile eseguire il comando: la squadra gia' presente");
                         return;
-                    }                    
+                    } 
+                j++;   
                 }
-                j++;
-                
+                                
                 classificaSerieA[i] = squadra;   //inseriamo la squadra
                 return;
             }
@@ -151,7 +151,7 @@ public class Classifica {
                 }
             }
             
-            System.out.println("Impossibile eseguire il comando: Almeno Una delle Squadre non è presente nella Classifica");
+            System.out.println("Impossibile eseguire il comando: Almeno Una delle Squadre non e' presente nella Classifica");
             return null;
 
         }

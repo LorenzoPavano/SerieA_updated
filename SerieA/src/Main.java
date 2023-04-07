@@ -39,7 +39,6 @@ public class Main {
         inter.insertGiocatore(Zanetti);
         inter.insertGiocatore(Sanchez);
         inter.insertGiocatore(Sanchez);
-        inter.insertGiocatore(null);
         inter.insertGiocatore(Zanetti);
         inter.insertGiocatore(Barella);
         inter.insertGiocatore(Vidal);
@@ -57,9 +56,10 @@ public class Main {
         System.out.println(classificaSerieA);
         Squadra Juventus = new Squadra("Juventus");
         
-        System.out.println(Arrays.toString(classificaSerieA.esitoPartita(inter, 3, Juventus, 2)));
+        System.out.println(Arrays.toString(classificaSerieA.esitoPartita(inter, 3, null, 2)));
 
-        //Controllo che inserendo la Juventus nella classifica posso usare il metodo esito partita
+
+        classificaSerieA.insertSquadra(inter);
         classificaSerieA.insertSquadra(Juventus);
         System.out.println(classificaSerieA);
         System.out.println(Arrays.toString(classificaSerieA.esitoPartita(inter, 2, Juventus, 1)));

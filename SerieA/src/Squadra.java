@@ -50,7 +50,7 @@ public class Squadra implements Comparable<Squadra> {
                     int j = 0;
                     while (j < i && i >= 1) {       //verifichiamo che il giocatore da inserire non sia già presente nell'array, tra gli indici precedenti
                         if(rosaGiocatori[j].equals(giocatore)){
-                            System.out.println("Impossibile eseguire il comando: giocatore già presente");
+                            System.out.println("Impossibile eseguire il comando: giocatore gia' presente");
                             return;
                         }
                         j++;
@@ -61,7 +61,7 @@ public class Squadra implements Comparable<Squadra> {
                 }
             }
         }
-        System.out.println("Impossibile eseguire il comando: rosa giocatori completa");
+        System.out.println("Impossibile eseguire il comando: giocatore nullo o rosa giocatori completa");
     }
 
 
